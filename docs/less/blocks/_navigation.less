@@ -1,5 +1,5 @@
 .navigation {
-	font-size: 22px;
+	font-size: 18px;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 3px;
@@ -9,6 +9,10 @@
 	
 	@media (min-width: 768px) {
 		position: absolute;
+		
+	}
+	@media (min-width: 1200px) {
+//		display: none;
 	}
 	
 	.navigation__toggle{
@@ -21,9 +25,10 @@
 	cursor: pointer;
 	
 	@media (min-width: 768px) {
+		font-size: 22px;
 		display: none;
+		}
 	}
-}
 
 .navigation__toggle--fixed {
 	position: fixed;
@@ -110,21 +115,6 @@
 			color: @yellow;
 		}
 	}
-}
-
-
-.резюме____портфолио____контакты {
-  font-size: 22px;
-  font-family: "NotoSans";
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1.2;
-  text-align: right;
-  position: absolute;
-  left: 476.938px;
-  top: 55.239px;
-  z-index: 179;
 }
 
 
