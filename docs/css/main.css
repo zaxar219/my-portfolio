@@ -621,7 +621,7 @@ a.mouse_scroll:focus {
   font-size: 18px;
   margin-right: 5px;
 }
-.filter {
+.filter-block {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
@@ -629,38 +629,38 @@ a.mouse_scroll:focus {
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  .filter {
+  .filter-block {
     padding-top: 8px;
     margin-bottom: 39px;
   }
 }
-.filter__block {
+.filter-block__block {
   margin: 0;
   padding: 0;
   list-style-type: none;
   text-align: center;
 }
-.filter__element {
+.filter-block__element {
   margin: 0;
   margin-bottom: 9px;
   padding: 0;
   display: block;
 }
 @media (min-width: 768px) {
-  .filter__element {
+  .filter-block__element {
     margin-right: 0;
     display: inline-block;
   }
 }
 @media (min-width: 1200px) {
-  .filter__element {
+  .filter-block__element {
     margin-right: 11px;
   }
-  .filter__element:last-child {
+  .filter-block__element:last-child {
     margin-right: 0;
   }
 }
-.filter__button {
+.filter-block__button {
   display: inline-block;
   color: #cecece;
   cursor: pointer;
@@ -669,7 +669,7 @@ a.mouse_scroll:focus {
   padding-right: 31px;
   padding-bottom: 15px;
 }
-.filter__button:hover {
+.filter-block__button:hover {
   border: 2px solid #0052c2;
   padding-top: 10px;
   padding-left: 29px;
@@ -677,13 +677,16 @@ a.mouse_scroll:focus {
   padding-bottom: 13px;
   color: #000;
 }
-.filter__button--active {
+.filter-block__button--active {
   border: 2px solid #0052c2;
   padding-top: 10px;
   padding-left: 29px;
   padding-right: 29px;
   padding-bottom: 13px;
   color: #000;
+}
+#portfolio-projects .mix {
+  display: none;
 }
 .portfolio-item {
   margin-left: auto;

@@ -6,5 +6,8 @@ $(document).ready(function() {
 	    highlightSelector:"nav a"
 	});
 
-
+	// MixItUp - Фильтрация работ в портфолио
+	$('#portfolio-projects').mixItUp();
+	
+	
 }); 
