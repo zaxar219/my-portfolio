@@ -1,38 +1,34 @@
 $(document).ready(function() {
 
-	var navToggleButton = $('.navigation__toggle');
+	var navToggleButton = $('#navigation__button');
 	var navToggleIcon = $('.navigation__toggle .fa');
 	var navBlock = $('.navigation__list');
 	var navBlockOpen = 'navigation__list--open';
 	var navLink = $('.navigation__list a');
-	var iconNav = 'fa-bars';
-	var iconClose = 'fa-times';
 
-	// Мобильная навигация
+	// События по клику на иконку навигации
 	navToggleButton.on('click', function(e){
 		e.preventDefault();
 		navBlock.toggleClass(navBlockOpen);
-
-		if ( navToggleIcon.hasClass(iconNav) ){
-			navToggleIcon.removeClass(iconNav);
-			navToggleIcon.addClass(iconClose);
-		} else {
-			navToggleIcon.removeClass(iconClose);
-			navToggleIcon.addClass(iconNav);
-		}
 		
-	})
+		if (navToggleButton.hasClass("active")) {
+			navToggleButton.removeClass("active")
+		} else {
+			navToggleButton.addClass("active");
+		}
 
+	})
+	// События по клику на ссылки в навигации
 	navLink.on('click', function(){
 
 		if ( navBlock.hasClass(navBlockOpen) ) {
-			if ( navToggleIcon.hasClass(iconNav) ){
-				navToggleIcon.removeClass(iconNav);
-				navToggleIcon.addClass(iconClose);
+			
+			if (navToggleButton.hasClass("active")) {
+				navToggleButton.removeClass("active")
 			} else {
-				navToggleIcon.removeClass(iconClose);
-				navToggleIcon.addClass(iconNav);
+				navToggleButton.addClass("active");
 			}
+			
 		}
 
 		navBlock.removeClass(navBlockOpen);
