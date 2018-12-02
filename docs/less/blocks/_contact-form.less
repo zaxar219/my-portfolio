@@ -128,3 +128,31 @@
 
 	}
 }
+
+Label.error {
+	background-color: #c62828;
+	position: relative;
+	display: block;
+	border-radius: 8px;
+	color: #fff;
+	padding: 5px 15px 8px;
+	font-weight: 700;
+	margin-bottom: 15px;
+	margin-top: 2px;
+	
+	@cornerSize: 12px;
+	
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 100%;
+		left: 40px;
+		
+//		margin-bottom: -@cornerSize;
+		width: 0;
+		height: 0;
+		border-bottom: @cornerSize solid #c62828;
+		border-right: @cornerSize solid transparent;
+		border-left: @cornerSize solid transparent;
+	}
+}

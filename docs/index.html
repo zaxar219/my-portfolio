@@ -452,15 +452,18 @@
 						Связаться со мной
 					</div>
 					
-					<form class="contact-form">
+					<form id="contact-form" class="contact-form">
 						<input type="text" class="contact-form__input" name="name" placeholder="Имя">
 						<input type="text" class="contact-form__input" name="email" placeholder="Email">
-						<biv>
+						
+						<biv class="clearfix">
 							<input type="text" class="contact-form__input contact-form__input--half-width" name="skype" placeholder="Skype">
 							<input type="text" class="contact-form__input contact-form__input--half-width" name="phone" placeholder="Телефон">
+							
 						</biv>
+						
 						<div class="contact-form__bg-pencil">
-							<textarea class="contact-form__textarea" placeholder="Ваше сообщение"></textarea>
+							<textarea class="contact-form__textarea" placeholder="Ваше сообщение" name="massage"></textarea>
 						</div>
 						<input type="submit" class="contact-form__submit" name="" value="Отправить">
 					</form>
@@ -487,6 +490,7 @@
 	<script type="text/javascript" src="libs/mixitup2/jquery.mixitup.min.js"></script>
 	<script src="libs/fancybox/jquery.fancybox.js"></script>
 	<script src="libs/jquery/jquery.mousewheel-3.0.6.pack.js"></script>
+	<script src="libs/jquery.validate/jquery.validate.js"></script>
 	
 	<script src="js/navigation.js"></script>
 	<script src="js/main.js"></script>
