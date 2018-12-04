@@ -44,18 +44,16 @@
 	display: inline-block;
 	color: #cecece;
 	cursor: pointer;
+	transition: all 0.2s ease-in;
+	border: 2px solid #fff;
 	
-	padding-top: 12px;
-	padding-left: 31px;
-	padding-right: 31px;
-	padding-bottom: 15px;
+	padding-top: 10px;
+	padding-left: 29px;
+	padding-right: 29px;
+	padding-bottom: 13px;
 	
-	&:hover {
+	&:hover, &:focus, &:active {
 		border: 2px solid @blueHeading;
-		padding-top: 10px;
-		padding-left: 29px;
-		padding-right: 29px;
-		padding-bottom: 13px;
 		color: #000;
 	}
 }

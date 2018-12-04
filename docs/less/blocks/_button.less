@@ -3,14 +3,33 @@
 	font-weight: 700;
 	display: inline-block;
 	color: #fff;
-	padding-top: 14px;
-	padding-bottom: 14px;
-	padding-left: 27px;
-	padding-right: 26px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 25px;
+	padding-right: 24px;
 	background-color: @blueHeading;
 	border-radius: 60px;
 	margin-top: 20px;
 	letter-spacing: 0.7px;
+	transition: all 0.2s ease-in;
+	border: 2px solid @blueHeading;
+	
+	text-decoration: none;
+	cursor: pointer;
+	
+	
+	&:hover, &:focus {
+		background-color: #fff;
+		color: @blueHeading;
+		border: 1px;
+		text-decoration: none;
+		border: 2px solid @blueHeading;
+	}
+	&:active {
+		color: @yellow;
+		border-color: @yellow;
+		background-color: transparent;
+	}
 	
 	@media (min-width: 768px) {
 		margin-top: -5px;
@@ -19,10 +38,20 @@
 	@media (min-width: 1200px) {
 		margin-top: -8px;
 	}
-	
+//	
+//	a {
+//		text-decoration: none;
+//		color: #fff;
+//		&:hover, &:focus {
+//			text-decoration: none;
+////			color: @blueHeading;
+//		}
+//	}
+//	
 	.fa {
 		font-size: 18px;
 		margin-right: 5px;
 	}
+	
 }
 
