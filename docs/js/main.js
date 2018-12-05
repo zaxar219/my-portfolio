@@ -1,4 +1,19 @@
 $(document).ready(function() {
+	
+	paticlesbg
+	
+	
+
+		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+	particlesJS.load('paticlesbg', 'js/particles.json', function() {
+	  console.log('callback - particles.js config loaded');
+	});
+
+	
+	
+	
+	
+	
 
 	
 	//Плавная прокрутка
