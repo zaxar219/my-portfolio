@@ -11,6 +11,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+a {
+  transition: all 0.2s ease-in;
+}
 /*
 	для вертикальноя полоски
 */
@@ -38,6 +41,9 @@ textarea {
 }
 .clearfix:after {
   clear: both;
+}
+body {
+  font-family: 'Noto Sans';
 }
 @media (min-width: 1200px) {
   .pad-rig-21 {
@@ -262,9 +268,9 @@ textarea {
   border-bottom: 1px dotted #d1e8fc;
 }
 .copyright a:hover {
-  color: #a7b8c6;
+  color: #ffe400;
   text-decoration: none;
-  border-bottom: 1px dotted #a7b8c6;
+  border-bottom: 1px dotted #ffe400;
 }
 .block-bg {
   position: relative;
@@ -380,6 +386,7 @@ textarea {
 .navigation a {
   color: #fff;
   text-decoration: none;
+  transition: all 0.2s ease-in;
 }
 .navigation a:hover,
 .navigation a:focus,
@@ -778,7 +785,7 @@ a.mouse_scroll:focus {
   padding-top: 10px;
   padding-left: 29px;
   padding-right: 29px;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
 }
 .filter-block__button:hover,
 .filter-block__button:focus,
@@ -791,7 +798,7 @@ a.mouse_scroll:focus {
   padding-top: 10px;
   padding-left: 29px;
   padding-right: 29px;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
   color: #000;
 }
 #portfolio-projects {
@@ -820,7 +827,7 @@ a.mouse_scroll:focus {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 190px;
+  min-height: 140px;
   cursor: pointer;
   overflow: hidden;
 }
@@ -899,6 +906,7 @@ a.mouse_scroll:focus {
 .portfolio-item__title a {
   color: #000;
   text-decoration: none;
+  transition: all 0.2s ease-in;
 }
 .portfolio-item__title a:hover,
 .portfolio-item__title a:active,
@@ -1003,6 +1011,7 @@ a.mouse_scroll:focus {
   color: #00599a;
   font-size: 16px;
   font-weight: 700;
+  outline: none;
   width: 100%;
   height: 128px;
   margin-bottom: 5px;
@@ -1040,6 +1049,7 @@ a.mouse_scroll:focus {
   border-radius: 80px;
   background-color: transparent;
   transition: all 0.3s ease-in;
+  outline: none;
 }
 .contact-form__submit:hover,
 .contact-form__submit:focus {
@@ -1071,7 +1081,7 @@ a.mouse_scroll:focus {
   .contact-form__bg-pencil:after {
     content: "";
     position: absolute;
-    left: 75%;
+    left: 68%;
     top: 75%;
     display: block;
     width: 203px;

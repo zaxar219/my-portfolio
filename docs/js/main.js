@@ -9,11 +9,14 @@ $(document).ready(function() {
 	  console.log('callback - particles.js config loaded');
 	});
 
-	
-	
-	
-	
-	
+	//scroll
+	$("body").niceScroll({
+		cursorcolor: "#39b4f5",
+		cursorwidth: "10px",
+//		opacitymin: "0.4",
+		cursoropacitymin: "0.4"
+	});
+
 
 	
 	//Плавная прокрутка
