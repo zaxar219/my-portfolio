@@ -833,7 +833,7 @@ a.mouse_scroll:focus {
 }
 @media (min-width: 768px) {
   .portfolio-item__image {
-    height: 190px;
+    height: 154px;
   }
 }
 @media (min-width: 992px) {
@@ -859,6 +859,22 @@ a.mouse_scroll:focus {
   font-size: 26px;
   color: #fff;
   transition: top 0.5s ease-out;
+}
+@media (min-width: 768px) {
+  .portfolio-item__image__hover {
+    height: 190px;
+  }
+}
+@media (min-width: 992px) {
+  .portfolio-item__image__hover {
+    height: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio-item__image__hover {
+    margin-bottom: 16px;
+    height: 250px;
+  }
 }
 .portfolio-item__image__hover .fa {
   font-size: 64px;
