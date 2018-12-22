@@ -282,6 +282,50 @@ body {
   width: 100%;
   height: 100%;
 }
+.botton {
+  text-decoration: none;
+  border: 4px solid #0052c2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 25px;
+  text-align: center;
+  color: #fff;
+  background-color: #0052c2;
+  font-size: 16px;
+  display: block;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+@media (min-width: 992px) {
+  .botton {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .botton {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+.botton:hover {
+  text-decoration: none;
+  color: #0052c2;
+  background-color: #fff;
+  border: 4px solid #0052c2;
+}
+.botton:active,
+.botton:focus {
+  text-decoration: none;
+  color: #fff;
+  background-color: #0052c2;
+  border: 4px solid #0052c2;
+}
 .navigation {
   font-size: 18px;
   font-weight: 700;
@@ -692,51 +736,6 @@ a.mouse_scroll:focus {
     letter-spacing: 0.5px;
   }
 }
-.button {
-  font-size: 16px;
-  font-weight: 700;
-  display: inline-block;
-  color: #fff;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 25px;
-  padding-right: 24px;
-  background-color: #0052c2;
-  border-radius: 60px;
-  margin-top: 20px;
-  letter-spacing: 0.7px;
-  transition: all 0.2s ease-in;
-  border: 2px solid #0052c2;
-  text-decoration: none;
-  cursor: pointer;
-}
-.button:hover,
-.button:focus {
-  background-color: #fff;
-  color: #0052c2;
-  border: 1px;
-  text-decoration: none;
-  border: 2px solid #0052c2;
-}
-.button:active {
-  color: #ffe400;
-  border-color: #ffe400;
-  background-color: transparent;
-}
-@media (min-width: 768px) {
-  .button {
-    margin-top: -5px;
-  }
-}
-@media (min-width: 1200px) {
-  .button {
-    margin-top: -8px;
-  }
-}
-.button .fa {
-  font-size: 18px;
-  margin-right: 5px;
-}
 .filter-block {
   font-size: 16px;
   font-weight: 700;
@@ -817,7 +816,7 @@ a.mouse_scroll:focus {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
-  max-width: 360px;
+  max-width: 370px;
 }
 .portfolio-item__image {
   position: relative;
@@ -912,6 +911,7 @@ a.mouse_scroll:focus {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
+  margin-left: 15px;
 }
 @media (min-width: 1200px) {
   .portfolio-item__title {
@@ -945,6 +945,7 @@ a.mouse_scroll:focus {
 .portfolio-item__description {
   font-size: 14px;
   line-height: 20px;
+  margin-left: 15px;
 }
 @media (min-width: 1200px) {
   .portfolio-item__description {
@@ -1247,3 +1248,80 @@ Label.error:after {
   -webkit-transition-delay: 0, 0.3s;
   transition-delay: 0, 0.3s;
 }
+/*блок, в котором расположена карта*/
+.portfolio-item__card {
+  transition: all .5s ease;
+  transform: scale(0.9);
+  /*уменьшает размер блока, чтобы потом увеличить до 1*/
+  perspective: 500px;
+  /*глубина перспективы/объем 3D-пространства*/
+}
+/*элемент-карта*/
+.portfolio-item__card-block {
+  width: 100%;
+  position: relative;
+  transition: all 1s ease;
+  transform-style: preserve-3d;
+  /*определяет то, что дочерние элементы, находятся в 3D-пространстве*/
+}
+.portfolio-item__card:hover {
+  transform: scale(1) translate3d(0, -10px, 0);
+  /*при наведении на блок с картой, он увеличивается и поднимается вверх*/
+}
+.portfolio-item__card:hover .side {
+  box-shadow: -36px 18px 16px 0 rgba(0, 0, 0, 0.8);
+  /*при наведении на блок с картой, для видимой стороны карты задается тень*/
+}
+.portfolio-item__card-block-side {
+  transition: all .3s ease;
+  display: block;
+  backface-visibility: hidden;
+  /*прячет сторону карты, которая отвернута от пользователя*/
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.4);
+  /*небольшая тень, когда карта «лежит» на поверхности*/
+  width: 100%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 992px) {
+  .portfolio-item__card-block-side {
+    height: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio-item__card-block-side {
+    height: 250px;
+  }
+}
+.portfolio-item__card-block-side--blackout:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.portfolio-item__card-block-side__links {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*рубашка карты*/
+.back {
+  position: relative;
+}
+/*лицевая сторона карты*/
+.front {
+  position: absolute;
+  /*абсолютно позиционирован внутри родителя и лежит на рубашке карты*/
+  top: 0;
+  transform: rotateY(180deg);
+  /*отвернута от нас на 180 градусов по своей оси*/
+}
+.flip {
+  transform: rotateY(180deg);
+  /*при добавлении этого класса элемент развернется на 180 градусов*/
+}
+/*# sourceMappingURL=main.css.map */

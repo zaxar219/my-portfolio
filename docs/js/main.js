@@ -102,7 +102,20 @@ $(document).ready(function() {
 	}
 	
 	
-	
+	// Поворот карты по ховеру
+	 $('.portfolio-item__card').hover( function() {
+		$(this).find('.portfolio-item__card-block').addClass('flip')
+	 },
+	 function() {
+		$(this).find('.portfolio-item__card-block').removeClass('flip')
+	 })
+
+	$(function() {
+
+		$('.draggable').draggable();
+
+	});
+
 	
 	
 	
